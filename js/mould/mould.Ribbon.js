@@ -24,6 +24,7 @@ mould.Ribbon.prototype.hideRibbon = function() {
 	this.button.innerHTML = "Show Ribbon";
 };
 mould.Ribbon.prototype.handleButton_onClick = function(e) {
+	e.preventDefault();
 	if(this.showingRibbon) {
 		this.hideRibbon();
 	}
