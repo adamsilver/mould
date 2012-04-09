@@ -40,6 +40,10 @@ body {
 	float: left;
 }
 
+#logo a img {
+	border: none;
+}
+
 #header .ribbonButton {
 	border: 1px solid #ddd;
 	border-radius: 7px;
@@ -79,10 +83,22 @@ body {
 	background: -o-linear-gradient(top, #aaa, #444);	
 }
 
+#ribbon .icon {
+	width: 80px;
+	float: left;
+	margin-right: 20px;
+	height: 80px;
+	background-color: #eee;
+	border: 1px solid #444;
+	border-radius: 7px;
+	margin-bottom: 20px;
+}
+
 #ribbonInner {
-	padding: 40px;
+	padding: 20px 20px 0px 20px;
 	max-width: 920px;
 	margin: 0 auto;
+	overflow: hidden;
 }
 
 #navigation {

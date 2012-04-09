@@ -41,3 +41,14 @@ body {
 #navigation ul li a {
 	color: #fff;
 }
+
+#ribbonInner {
+	padding: 5px;
+}
+
+#ribbon .icon {
+	width: 75px;
+	height: 75px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}

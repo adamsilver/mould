@@ -10,15 +10,26 @@ body {
 	overflow: hidden;
 }
 
+#secondary {
+	width: 200px;
+	float: left;
+	padding: 20px 0px;
+}
+
+#primary {
+	width: 680px;
+	float: left;
+	padding: 20px;
+}
+
 #footer p {
 	max-width: 960px;
 }
 
 #navigation {
 	border: 1px solid #ccc;
-	padding: 10px;
+	border-bottom: none;
 	margin-bottom: 30px;
-	float: left;
 }
 
 #navigation ul {
@@ -28,5 +39,11 @@ body {
 
 #navigation ul li {
 	list-style: none;
-	font-size: 1.1em;
+	font-size: 1.2em;
+}
+
+#navigation ul li a {
+	display: block;
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
 }
