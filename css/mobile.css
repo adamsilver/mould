@@ -1,5 +1,4 @@
 body {
-	background: red;
 }
 
 #ribbonInner,
@@ -8,4 +7,37 @@ body {
 #searchForm,
 #footer p  {
 	width: auto;
+}
+
+#headerInner .navigationButton {
+	display: block;
+}
+
+#headerInner .navigationButton.activated {
+	background-color: #666;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+#navigation {
+	position: absolute;
+	right: 21px;
+	top: 55px;
+	padding: 10px;
+	background-color: #666;
+	width: 70px;
+}
+
+#navigation ul {
+	margin: 0;
+	padding: 0;
+}
+
+#navigation ul li {
+	font-size: 1.1em;
+	list-style: none;
+}
+
+#navigation ul li a {
+	color: #fff;
 }

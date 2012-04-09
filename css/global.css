@@ -5,6 +5,10 @@ body {
 	font-size: 62.5%;
 }
 
+.hide {
+	display: none;
+}
+
 #container {
 
 }
@@ -47,8 +51,17 @@ body {
 	width: 66px;
 	text-align: center;
 	display:block;
-	position: relative;
-	top: -37px;
+}
+
+#header .navigationButton {
+	float: right;
+	font-size: 1.1em;
+	border: 1px solid #ddd;
+	border-radius: 7px;
+	background-color: #444;
+	color: #fff;
+	padding: 8px;
+	display: none;
 }
 
 #ribbon {
@@ -70,6 +83,10 @@ body {
 	padding: 40px;
 	max-width: 920px;
 	margin: 0 auto;
+}
+
+#navigation {
+
 }
 
 #footer {
