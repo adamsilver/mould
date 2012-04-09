@@ -2,14 +2,32 @@ body {
 }
 
 #searchForm {
-	width: 920px;
+	max-width: 920px;
 }
 
 #main {
-	width: 960px;
+	max-width: 920px;
+	padding: 20px;
+	overflow: hidden;
 }
 
 #footer p {
-	width: 960px;
+	max-width: 960px;
 }
 
+#navigation {
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin-bottom: 30px;
+	float: left;
+}
+
+#navigation ul {
+	margin: 0;
+	padding: 0;
+}
+
+#navigation ul li {
+	list-style: none;
+	font-size: 1.1em;
+}
