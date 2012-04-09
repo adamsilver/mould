@@ -9,6 +9,12 @@ body {
 	display: none;
 }
 
+h1 {
+	font-size: 2em;
+	margin: 0px 0px 20px 0px;
+	padding: 0px;
+}
+
 #container {
 
 }
@@ -143,4 +149,19 @@ body {
 
 #searchForm .actions {
 	float: left;
+}
+
+#thingers {
+
+}
+
+#thingers .thinger {
+	overflow: hidden;
+}
+
+#thingers .thinger .icon {
+	width: 80px;
+	height: 80px;
+	background-color: #eee;
+	border-radius: 7px;
 }

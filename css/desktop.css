@@ -11,15 +11,17 @@ body {
 }
 
 #secondary {
-	width: 200px;
+	width: 25%;
 	float: left;
-	padding: 20px 0px;
 }
 
 #primary {
-	width: 680px;
+	width: 75%;
 	float: left;
-	padding: 20px;
+}
+
+#primary .inner {
+	padding-left: 20px;
 }
 
 #footer p {
