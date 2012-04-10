@@ -9,22 +9,36 @@ body {
 	width: auto;
 }
 
+#header .ribbonButton {
+	padding: 0px;
+	width: 27px;
+	height: 27px;
+}
+
+#header .ribbonButton span {
+	display: none;
+	
+}
+
+#headerInner {
+	padding: 5px;
+}
+
 #headerInner .navigationButton {
 	display: block;
 }
 
 #headerInner .navigationButton.activated {
-	background-color: #666;
-	border-bottom-right-radius: 0px;
-	border-bottom-left-radius: 0px;
+	background-color: #444;
+	background-image: url(../img/categories_selected.png);
 }
 
 #navigation {
 	position: absolute;
-	right: 21px;
-	top: 55px;
+	right: 6px;
+	top: 35px;
 	padding: 10px;
-	background-color: #666;
+	background-color: #444;
 	width: 70px;
 }
 
