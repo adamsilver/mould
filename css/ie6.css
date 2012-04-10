@@ -1,0 +1,12 @@
+#headerInner,
+#ribbonInner,
+#primary,
+#primary .inner,
+#thingers,
+#navigation ul li{
+	zoom: 1;
+}
+
+#ribbonInner {
+	padding-bottom: 20px;
+}

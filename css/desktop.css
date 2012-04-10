@@ -5,55 +5,8 @@ body {
 	max-width: 920px;
 }
 
-#main {
-	max-width: 920px;
-	overflow: hidden;
-}
-
-#secondary {
-	width: 25%;
-	float: left;
-}
-
-#primary {
-	width: 75%;
-	float: left;
-}
-
-#primary .inner {
-	padding-left: 20px;
-}
-
 #footer p {
 	max-width: 960px;
-}
-
-#navigation {
-	border-top: 1px solid #ccc;
-	border-bottom: none;
-	margin-bottom: 30px;
-}
-
-#navigation ul {
-	margin: 0;
-	padding: 0;
-}
-
-#navigation ul li {
-	list-style: none;
-	font-size: 1.4em;
-}
-
-#navigation ul li a {
-	display: block;
-	padding: 10px;
-	border-bottom: 1px solid #ccc;
-	color: #444;
-	text-decoration: none;
-}
-
-#navigation ul li a.selected {
-	color: #E20074;
 }
 
 .message {
@@ -67,17 +20,3 @@ body {
 	color: #4B4B4B;
 }
 
-#thingers {
-	overflow: hidden;
-}
-
-#thingers .thinger {
-	width: 145px;
-	float: left;
-	margin-bottom: 20px;
-	border: 1px solid #d0d0d0;
-	border-radius :3px;
-	-webkit-border-radius :3px;
-	padding: 20px;
-	margin-right: 20px;
-}
