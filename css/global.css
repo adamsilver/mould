@@ -199,6 +199,17 @@ h1 {
 #thingers .thinger .icon {
 	width: 80px;
 	height: 80px;
-	background-color: #eee;
+	background-color: #ccc;
 	border-radius: 7px;
+}
+
+.message {
+	background-color: #E0F1FA;
+	margin-bottom: 10px;
+	padding: 3px;
+}
+
+.message h2 {
+	margin: 0;
+	padding: 0;
 }

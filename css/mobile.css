@@ -66,3 +66,21 @@ body {
 	margin-right: 5px;
 	margin-bottom: 5px;
 }
+
+#thingers {
+	
+}
+
+#thingers .thinger {
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+#thingers .thinger .icon {
+	float: left;
+	margin-right: 10px;
+}
+
+#thingers .thinger .details {
+	float: left;
+}
