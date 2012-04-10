@@ -185,8 +185,15 @@ h1 {
 
 .panel {
 	border: 1px solid #ddd;
-	padding: 40px;
+	min-height: 100px;
 	margin-bottom: 20px;
+}
+
+.panel h2 {
+	border-bottom: 1px solid #ddd;
+	padding: 10px;
+	margin: 0;
+	font-size: 1.6em;
 }
 
 #main {
@@ -209,6 +216,18 @@ h1 {
 
 #searchForm .actions {
 	float: left;
+}
+
+#searchForm .actions input,
+#searchForm .actions a {
+	color: #333;
+	font-size: 1.2em;
+	text-decoration: none;
+	border: 1px solid #aaa;
+	padding: 3px;
+	display: inline-block;
+	background-color: #f5f5f5;
+	border-radius: 3px;
 }
 
 #thingers {
