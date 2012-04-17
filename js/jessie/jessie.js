@@ -29,7 +29,13 @@
 				throw new Error('Use attachListener with an element.'); 
 			} 
 
-			global.addEventListener(eventType, fn, false);
+			var listener = function(e) {
+				fn.call(e, e);
+			};
+
+			global.addEventListener(eventType, listener, false);
+
+			return listener;
 		};
 	};
 
@@ -213,6 +219,81 @@
 			}
 		};
 	};
+	
+	var attachBoundWindowListener;
+
+	if(attachWindowListener && bind) {
+		attachBoundWindowListener = function(eventType, fn, thisObject) {
+			var listener = bind(fn, thisObject);
+			return attachWindowListener(eventType, listener);
+		};
+	};
+
+	var attachListener;
+
+	if(html && isHostMethod(html, 'addEventListener')) {
+		attachListener = function(el, eventType, fn) { 
+
+			var listener = function(e) {
+				fn.call(e, e);
+			};
+
+			el.addEventListener(eventType, listener, false); 
+
+			return listener;
+		};
+	};
+	
+	var getEventTarget;
+
+	if(html && isHostMethod(html, 'addEventListener')) {
+		getEventTarget = function(e) { 
+		  var target = e.target; 
+		  // Check if not an element (e.g. a text node) 
+		  if (1 != target.nodeType) { 
+			// Set reference to parent node (which must be an element) 
+			target = target.parentNode; 
+		  } 
+		  return target; 
+		};
+	}
+	
+	var delegateListener;
+
+	if(attachListener && getEventTarget) {
+		delegateListener = function(el, eventType, fn, fnDelegate) {
+
+			var listener = function(e) {			
+				if(fnDelegate(getEventTarget(e))) {
+					fn.call(e, e);
+				}
+			};
+
+			return attachListener(el, eventType, listener);
+
+		};
+	};
+	
+	var delegateBoundListener;
+
+	if(delegateListener && bind) {
+		delegateBoundListener = function(el, eventType, fn, fnDelegate, thisObject) {
+			var listener = bind(function(e) {
+				if(fnDelegate(getEventTarget(e))) {
+					fn.call(thisObject, e);
+				}
+			}, thisObject);
+
+			attachListener(el, eventType, listener);
+			return listener;		
+		};
+	};
+
+	if(html && isHostMethod(html, 'addEventListener')) {
+		var cancelDefault = function(e) { 
+			e.preventDefault();
+		};
+	}
 
 	globalDocument = html = null;
 
@@ -223,5 +304,10 @@
 	global.jessie.getElementPositionStyles = getElementPositionStyles;
 	global.jessie.addClass = addClass;
 	global.jessie.removeClass = removeClass;
-
+	global.jessie.attachBoundWindowListener = attachBoundWindowListener;
+	global.jessie.attachListener = attachListener;
+	global.jessie.delegateListener = delegateListener;
+	global.jessie.delegateBoundListener = delegateBoundListener;
+	global.jessie.getEventTarget = getEventTarget;
+	global.jessie.cancelDefault = cancelDefault;
 })(this);
