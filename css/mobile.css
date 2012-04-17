@@ -103,3 +103,15 @@ body {
 #primary .inner {
 	padding-left: 0px;
 }
+
+#streamNavigation {
+	
+}
+
+#placeHolder {
+	display: none;
+}
+
+#main {
+	padding: 3px;
+}

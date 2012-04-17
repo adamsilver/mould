@@ -8,7 +8,7 @@
 		<meta name="keywords" content="">
 		<meta name="author" content="Adam Silver">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
-		<title>Mould - Home</title>
+		<title>Mould - Stream</title>
 		<link rel="stylesheet" type="text/css" href="css/global.css" media="all">
 		<link rel='stylesheet' type="text/css" href='css/desktop.css' media='screen and (min-width: 321px)'  >
 		<link rel='stylesheet' type="text/css" href='css/mobile.css' media='screen and (max-width: 320px)'  >
@@ -16,7 +16,7 @@
 		<link rel="stylesheet" type="text/css" href="css/print.css" media="print">
 		<!--[if IE 6]><link rel="stylesheet" href="css/ie6.css" type="text/css" /><![endif]-->
 	</head>
-	<body id="pageCatalogue">
+	<body>
 		<div id="container">
 			<div id="header">
 				<div id="headerInner">
@@ -34,58 +34,52 @@
 				</div>
 			</div>
 			<div class="heading">
-				<h1>Catalogue</h1>
+				<h1>Dashboard</h1>
 			</div>	
 			<div id="main">
 				
+				<div id="placeHolder">
+					<p>Place holder</p>
+				</div>
+				
 				<div id="secondary">
-					<div id="navigation">
+					<div id="streamNavigation">
 						<ul>
-							<li><a href="#" class="selected">Empholene</a></li>
-							<li><a href="#">News 2</a></li>
-							<li><a href="#">Social</a></li>
+							<li class="stream">
+								<a href="stream-topapps.html">
+									<div class="container">
+										<p class="header">TopApps of the week</p>
+										<p class="name">TopApps</p>
+										<p class="updateTime">17:40</p>
+									</div>			
+								</a>
+							</li>
+							<li class="stream">
+								<a href="#">
+									<div class="container">
+										<p class="header">stream header blah</p>
+										<p class="name">Stream name</p>
+										<p class="updateTime">17:40</p>
+									</div>			
+								</a>
+							</li>
+							<li class="stream">
+								<a href="#">
+									<div class="container">
+										<p class="header">stream header blah</p>
+										<p class="name">Stream name</p>
+										<p class="updateTime">17:40</p>
+									</div>			
+								</a>
+							</li>
 						</ul>
 					</div>
 				</div>
 				<div id="primary">
 					<div class="inner">
 																
-						<div class="message">
-							<h2>Some message</h2>
-						</div>
-						
-						<div id="thingers">
-							
-							<div class="thinger">
-								<div class="icon"></div>
-								<div class="details">
-									<h3>Title</h3>
-								</div>
-							</div>
-							<div class="thinger">
-								<div class="icon"></div>
-								<div class="details">
-									<h3>Youtube</h3>
-								</div>
-							</div>
-							<div class="thinger">
-								<div class="icon"></div>
-								<div class="details">
-									<h3>Title</h3>
-								</div>
-							</div>
-							<div class="thinger">
-								<div class="icon"></div>
-								<div class="details">
-									<h3>Title</h3>
-								</div>
-							</div>
-							<div class="thinger">
-								<div class="icon"></div>
-								<div class="details">
-									<h3>Title</h3>
-								</div>
-							</div>
+						<div id="streamDisplay">
+							The stream goes here
 						</div>
 
 					</div>
@@ -98,8 +92,9 @@
 		<script type="text/javascript" src="js/jessie/jessie.js"></script>
 		<script type="text/javascript" src="js/mould/mould.js"></script>
 		<script type="text/javascript" src="js/mould/mould.Ribbon.js"></script>
-		<script type="text/javascript" src="js/mould/mould.Navigation.js"></script>
+		<script type="text/javascript" src="js/mould/mould.ModeChanger.js"></script>
+		<script type="text/javascript" src="js/mould/mould.StreamEnhancer.js"></script>
 		<script type="text/javascript" src="js/mould/pages/mould.pages.js"></script>
-		<script type="text/javascript" src="js/mould/pages/mould.pages.catalogue.js"></script>
+		<script type="text/javascript" src="js/mould/pages/mould.pages.streams.js"></script>
 	</body>
 </html>
