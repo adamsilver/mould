@@ -214,6 +214,16 @@
 		};
 	};
 
+
+	var getViewportSize;
+
+	if(html && 'number' == typeof html.clientWidth) {
+		getViewportSize = function(win) {
+			var html = win.document.documentElement;
+			return [html.clientWidth, html.clientHeight];
+		}
+	};
+
 	globalDocument = html = null;
 
 	global.jessie = {};
@@ -223,5 +233,6 @@
 	global.jessie.getElementPositionStyles = getElementPositionStyles;
 	global.jessie.addClass = addClass;
 	global.jessie.removeClass = removeClass;
+	global.jessie.getViewportSize = getViewportSize;
 
 })(this);
