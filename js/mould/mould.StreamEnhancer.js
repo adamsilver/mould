@@ -1,5 +1,3 @@
-mould.StreamEnhancer;
-
 if(	mould.ModeChanger && 
 	jessie.delegateBoundListener && 
 	jessie.attachBoundListener &&
@@ -39,7 +37,8 @@ if(	mould.ModeChanger &&
 	
 	mould.StreamEnhancer.prototype.createBackButton = function() {
 		this.backButton = document.createElement("a");
-		this.backButton.innerHTML = "Back to streams";
+		this.backButton.innerHTML = "< Streams";
+		this.backButton.className = "backToStreams";
 		this.backButton.href = "#";
 		jessie.attachBoundListener(this.backButton, "click", this.handleBackButton_onClick, this);
 	};
@@ -48,15 +47,19 @@ if(	mould.ModeChanger &&
 		jessie.cancelDefault(e);
 		this.hideDisplay();
 		this.showNavigation();
+		this.hideBackButton();
 	};
 	
-	mould.StreamEnhancer.prototype.showBackButton = function() {
-		this.display.appendChild(this.backButton);
+	mould.StreamEnhancer.prototype.showBackButton = function() {	
+		var beforeElement;		
+		var container = document.getElementsByClassName("heading")[0];
+		beforeElement = container.getElementsByTagName("h1")[0];		
+		container.insertBefore(this.backButton, beforeElement);
 	};
 	
 	mould.StreamEnhancer.prototype.hideBackButton = function() {
-		if(this.backButton && this.backButton.parentNode) {
-			this.display.removeChild(this.backButton);
+		if(this.backButton && this.backButton.parentNode) {			
+			this.backButton.parentNode.removeChild(this.backButton);
 		}
 	};
 	
@@ -78,6 +81,7 @@ if(	mould.ModeChanger &&
 		var p = document.createElement("p");
 		p.innerHTML = "i have been updated";
 		this.display.appendChild(p);
+		this.display.focus();
 	};
 
 	mould.StreamEnhancer.prototype.enableCompactMode = function() {	

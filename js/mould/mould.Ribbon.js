@@ -1,13 +1,10 @@
-
-mould.Ribbon;
-
 if(jessie.attachBoundListener) {
 	mould.Ribbon = function(ribbonContainer, headerContainer) {
 		this.showingRibbon = true;
 		this.ribbonContainer = ribbonContainer;
 		this.headerContainer = headerContainer;
 		this.createButton();
-		this.hideRibbon();	
+		this.hideRibbon();
 	};
 	mould.Ribbon.prototype.createButton = function() {
 		this.button = document.createElement("a");
@@ -35,6 +32,6 @@ if(jessie.attachBoundListener) {
 		}
 		else {
 			this.showRibbon();
-		}	
+		}
 	};
 }

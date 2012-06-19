@@ -1,0 +1,22 @@
+
+
+#modules {
+	overflow: hidden;
+}
+
+#modules .moduleSet {
+	float: left;
+	width: 33%;
+}
+
+#modules .moduleSet .module {
+	margin-right: 10px;
+}
+
+#modules .moduleSet3 .module {
+	margin-right: 0px;
+}
+
+#modules .stickyModuleContainer {
+	width: 99%;
+}
